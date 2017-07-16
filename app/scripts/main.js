@@ -131,34 +131,34 @@ function setBackground(icon) {
 	console.log(icon);
 	switch (icon) {
 		case "clear-day":
-			$("body").css("background", "#f1c40f");
+			$("body").css("background", "#EBFFFA");
 			break;
 		case "clear-night":
-			$("body").css("background", "#7678ED");
+			$("body").css("background", "#1B264F"); 
 			break;
 		case "rain":
 			$("body").css("background", "#345995");
 			break;
 		case "snow":
-			$("body").css("background", white);
+			$("body").css("background", "#FBFBFB");
 			break;
 		case "sleet":
-			$("body").css("background", blue);
+			$("body").css("background", "#77878B");
 			break;
 		case "wind":
-			$("body").css("background", grey);
+			$("body").css("background", "#8D99AE");
 			break;
 		case "fog":
-			$("body").css("background", grey);
+			$("body").css("background", "#819595");
 			break;
 		case "cloudy":
 			$("body").css("background", "#bdc3c7");
 			break;
 		case "partly-cloudy-day":
-			$("body").css("background", "#D3F3EE");
+			$("body").css("background", "#CEDDDD");
 			break;
 		case "partly-cloudy-night":
-			$("body").css("background", "#95a5a6");
+			$("body").css("background", "#0E0F19");
 			break;
 		default:
 			break;
