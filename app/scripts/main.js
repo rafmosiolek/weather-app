@@ -75,6 +75,98 @@ function getDarkskyData(url) {
 			console.log(data.currently.humidity);
 			$("#weather-details .wind").html("<p>Wind: " + data.currently.windSpeed + " KPH</p>");
 			console.log(data.currently.windSpeed);
+
+			console.log(data.hourly.data[0].precipProbability);
+
+			giveTip(data.daily.data[0].icon);
+			setBackground(data.daily.data[0].icon);
 		}
 	});
 }
+
+
+function giveTip(icon) {
+	console.log(icon);
+	switch (icon) {
+		case "clear-day":
+			$("#clothing-tips .tips").html("<p>T-shirt weather! Don't forget your coolest shades!</p>");
+			break;
+		case "clear-day":
+			$("#clothing-tips .tips").html("<p>T-shirt weather!, but it might rain so take your brolly!</p>");
+			break;
+		case "clear-night":
+			$("#clothing-tips .tips").html("<p>Still perfect for t-shirt, but, you know, it's night, so maybe a jumper?</p>");
+			break;
+		case "clear-night":
+			$("#clothing-tips .tips").html("<p>You better wear your rain coat!</p>");
+			break;
+		case "rain":
+			$("#clothing-tips .tips").html("<p>Don't forget your umbrella!</p>");
+			break;
+		case "snow":
+			$("#clothing-tips .tips").html("<p>WINTER IS COMING! But seriously, wear some warm undies, will you?</p>");
+			break;
+		case "sleet":
+			$("#clothing-tips .tips").html("<p>Stay at home. But if you have to leave, take your best rain coat.</p>");
+			break;
+		case "wind":
+			$("#clothing-tips .tips").html("<p>It's windy out there! Some warm jumper comes in handy!</p>");
+			break;
+		case "fog":
+			$("#clothing-tips .tips").html("<p></p>");
+			break;
+		case "cloudy":
+			$("#clothing-tips .tips").html("<p></p>");
+			break;
+		case "partly-cloudy-day":
+			$("#clothing-tips .tips").html("<p>It's quite warm outside, but just in case take a longsleeve with you!</p>");
+			break;
+		case "partly-cloudy-night":
+			$("#clothing-tips .tips").html("<p></p>");
+			break;
+		default:
+			break;
+	}
+}
+
+
+function setBackground(icon) {
+	console.log(icon);
+	switch (icon) {
+		case "clear-day":
+			$("body").css("background", "#f1c40f");
+			break;
+		case "clear-night":
+			$("body").css("background", "#7678ED");
+			break;
+		case "rain":
+			$("body").css("background", "#345995");
+			break;
+		case "snow":
+			$("body").css("background", white);
+			break;
+		case "sleet":
+			$("body").css("background", blue);
+			break;
+		case "wind":
+			$("body").css("background", grey);
+			break;
+		case "fog":
+			$("body").css("background", grey);
+			break;
+		case "cloudy":
+			$("body").css("background", "#bdc3c7");
+			break;
+		case "partly-cloudy-day":
+			$("body").css("background", "#D3F3EE");
+			break;
+		case "partly-cloudy-night":
+			$("body").css("background", "#95a5a6");
+			break;
+		default:
+			break;
+	}
+}
+
+
+
