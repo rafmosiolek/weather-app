@@ -12,9 +12,11 @@ function userGeoLocation() {
 }
 
 function successCallback(position) {
+	// store user's device coordinates in lat and lng variables
 	var lat = position.coords.latitude;
 	var lng = position.coords.longitude;
 	console.log("Your location is: " + lat + "° , " + lng + "°");
+	// call displayCity and fireDarkskyApi functions
 	displayCity(lat, lng);
 	fireDarkskyApi(lat, lng);
 
@@ -115,8 +117,6 @@ function giveTip(temp, precip) {
 }
 
 
-
-// $("#clothing-tips .tips").html("<p></p>");
 function setBackground(icon) {
 	console.log(icon);
 	switch (icon) {
