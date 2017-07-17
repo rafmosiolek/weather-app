@@ -4,5 +4,39 @@ $icon-font-path: '../fonts/';
 // endbower
 
 body {
+	font-family: Helvetica, sans-serif;
+	color: #1A181B;
 
+	h2 {
+		font-weight: bold;
+	}
+
+	p {
+		font-size: 15px;
+		margin: 5px;
+		padding: 10px;
+		border-bottom: 1px solid;	
+	}
+
+	#location {
+		h2 {
+			font-size: 32px;
+			margin: 32px 0px;
+			padding: 10px 3px;
+		}
+	}
+
+	#weather-data {
+		h2 {
+			margin: 40px 0px;
+			font-size: 50px;
+		}
+	}
+
+	#clothing-tips {
+		p {
+			margin: 40px 0;
+			border: none;
+		}
+	}
 }

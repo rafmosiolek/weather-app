@@ -82,6 +82,7 @@ function getDarkskyData(url) {
 			console.log("High temp: " + data.daily.data[0].temperatureMax);
 			console.log("Min temp: " + data.daily.data[0].temperatureMin);
 			console.log(data.daily.data[0].icon);
+			$("#weather-data .summary").html("<p>" + data.hourly.data[0].summary + "</p>");
 			// append the humidity information as a percentage to the document
 			$("#weather-details .humidity").html("<p>Humidity: " + data.currently.humidity * 100 + "%</p>");
 			console.log("Humidity: " + data.currently.humidity);
@@ -107,7 +108,7 @@ function giveTip(temp, precip) {
 	if (temp >= 20) {
 		tip += "It's a T-shirt weather! ";
 	} else if (temp >= 10) {
-		tip += "It's a sweater weather! ";
+		tip += "It's quite chilly outside, you better wear some jumper. ";
 	} else if (temp >= 0){
 		tip += "Wear warm undies! ";
 	} else {
@@ -159,11 +160,10 @@ function setBackground(icon) {
 			break;
 		case "partly-cloudy-night":
 			$("body").css("background", "#0E0F19");
+			$("body").css("color", "#EBFFFA");
 			break;
 		default:
 			break;
 	}
 }
-
-
 

@@ -1,6 +1,8 @@
 # Weather Forecast Web App
 Web app that recommends clothing to wear based on weather forecast at user's location
 
+![Screen-shot-app](/app/images/screen-shot-app.png?raw=true)
+
 ## Getting Started
 
 To get the project up and running on your local machine you need to clone this repository, install **npm package manager, bower, gulp** and **grunt**.
@@ -49,4 +51,3 @@ The application was scaffolded with Yeoman WebApp Generator.
 
 
 ![Screen-shot](/app/images/screen-shot.png?raw=true)
- 
