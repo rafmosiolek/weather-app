@@ -62,7 +62,7 @@ function displayCity(latitude, longitude) {
 
 function fireDarkskyApi(latitude, longitude) {
 	// add HTTP query parameter at the end of the url to use SI units
-	var url = "https://api.darksky.net/forecast/c78e6b910ba14ef6ac41cfc1e46b3af5/" + latitude + "," + longitude + "?units=si";
+	var url = "https://api.darksky.net/forecast/DARK_SKY_API_KEY/" + latitude + "," + longitude + "?units=si";
 	console.log(url);
 	// call the getDarkskyData function passing the url with user's device coordinates as a parameter
 	getDarkskyData(url);
